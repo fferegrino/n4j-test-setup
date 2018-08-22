@@ -37,7 +37,7 @@ class FlightsDatabase(object):
 
     def insert_transform(self, insert_script, properties, transform_function, indexing_script=None):
         start_time = time.time()
-        transformed_properties, self._map_keys = transform_function(properties)
+        transformed_properties, self._map_keys, delete = transform_function(properties)
         with self._driver.session() as session:
             tx = session.begin_transaction()
             results = tx.run(insert_script, parameters={'props': transformed_properties})
@@ -48,6 +48,9 @@ class FlightsDatabase(object):
                 tx.run(indexing_script)
                 tx.commit()
 
+        if delete:
+            del transformed_properties
+            
         time_elapsed = time.time() - start_time
 
         return time_elapsed, results.summary().counters
