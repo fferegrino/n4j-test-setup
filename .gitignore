@@ -250,3 +250,6 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/macos,python,windows,intellij
+
+# idk, bye bye .idea
+.idea/*

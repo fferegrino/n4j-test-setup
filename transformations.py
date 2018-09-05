@@ -14,7 +14,7 @@ def transform_stringify_second_level(array_of_dicts: list):
             else:
                 aa[k] = a[k]
         array.append(aa)
-    return array, dict_keys
+    return array, dict_keys, False
 
 
 def transform_stringify_flights(flights_):
@@ -39,7 +39,7 @@ def transform_stringify_flights(flights_):
             }
         }
         fs.append(new_flight)
-    return fs, None
+    return fs, None, True
 
 
 def transform_split_maps(array_of_dicts: list):
@@ -58,11 +58,11 @@ def transform_split_maps(array_of_dicts: list):
         for k, map_ in maps:
             obj[k] = map_
         array.append(obj)
-    return array, map_keys
+    return array, map_keys, True
 
 
 def transform_as_is(array_of_dicts: list):
-    return array_of_dicts, None
+    return array_of_dicts, None, False
 
 
 def results_as_they_are(result: BoltStatementResult, keys: set):
