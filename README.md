@@ -66,10 +66,11 @@ sh run.sh 5
 The tests execution will generate a single file per run that consists of TSV file, where the columns are:
  - **run**: the number of run this info is about
  - **data**: whether that row refers to an insertion/retrieval of flight nodes or airports+airlines (denoted as other), depending on the value of this field the interpretation of times changes
- - **instance**: the instance that was used for insertion/retrieval, there are three posibilities: `3.4.0-plain`, `3.4.0-apoc` and `3.5.0-maps`
+ - **instance**: the instance that was used for insertion/retrieval, there are three possibilities: `3.4.0-plain`, `3.4.0-apoc` and `3.5.0-maps`
  - **records**: the number of records that were inserted, this number is only relevant when the row is about insertions of flights
- - **insertion**: the time (in seconds) that it took to insert the records in the specified instance. When the row refers to flights, this measures the insertion of flights, otherwise this refers to the insertion of airports.
- - **ins_retrieve**: when the row is about flights, this column holds the retrieval time of the flight nodes.  Otherwise this is the value in time of the insertion of airlines. Both are measured in seconds.
+ - **insertion**: the time (in seconds) that it took to insert the records in the specified instance. When the row refers to flights, this measures the insertion of flights, otherwise, this refers to the insertion of airports.
+ - **ins_retrieve**: when the row is about flights, this column holds the retrieval time of the flight nodes.  Otherwise, this is the value in time of the insertion of airlines. Both are measured in seconds.
  - **retrieve**: when the row is not about flights, this contains the time of retrieval of airport nodes
  - **date**: date time formatted as MMDDhhmm
+ 
  
