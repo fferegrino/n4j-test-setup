@@ -32,16 +32,16 @@ Create a folder to host the three different instances of Neo4j. For example: `~/
 
 ### 3. Configure the Web server (optional)
 
-If you wish to modify the execution port of the web application modify the line 50 in the file `Web.py` to run in other port different than `8888`.
+If you wish to modify the execution port of the web application, modify the line 50 in the file `Web.py` to run in other port different than `8888`.
 
 ### 4. Modify the file `run.sh` 
 
-This is needed to make it point to the right directories, from the line 8 to 11:
+This step is needed to make it point to the right directories, from the line 8 to 11:
 
- - **neo4jloc** (line 8), this needs to point to the location where the three different instances of Neo4j exist:, for example: `neo4jloc=~/flights/neo4j`
+ - **neo4jloc** (line 8), this needs to point to the location where the three different instances of Neo4j exist, for example: `neo4jloc=~/flights/neo4j`
  - **dataloc** (line 9), this needs to be an absolute route pointing to the folder that contains the three different csv files, for example: `dataloc="/home/dspg17/flights/delays/"`.
-- **resultsloc** (line 10), this is the route to an already existing folder where you want the results to be placed, for example: `resultsloc=~/flights/test/results`
-- **webendpoint** (line 11), if you modified the Web.py file in the step #3, you need to change the address, if not, leave the configuration by default, for example:`webendpoint="http://localhost:8888"`
+- **resultsloc** (line 10), this is the route to an already existing folder where you want the results to place the results, for example: `resultsloc=~/flights/test/results`
+- **webendpoint** (line 11), if you modified the Web.py file in the step #3, you need to change the address, if not, leave the configuration by default, for example: `webendpoint="http://localhost:8888"`
 
 ### 5. Run the web application
 
@@ -55,7 +55,7 @@ This program must be running in order to execute the following step.
 
 ### 6.  Execute the `run.sh` script
 
-The script requires a single parameter: the number of times you want the different executions to run, for example to execute 5 rounds of insertions and retrievals, the following command should be used
+The script requires a single parameter: the number of times you want the different executions to run, for example, to execute five rounds of insertions and retrievals, the following command should be used
 
 ```
 sh run.sh 5
