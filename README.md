@@ -27,7 +27,7 @@ Create a folder to host the three different instances of Neo4j. For example: `~/
 
 ### 2. Prepare the data set  
 
-1. Download the data set from this link:
+1. Download the data set from this link [flight-delays.zip](https://github.com/fferegrino/n4j-test-setup/releases/download/dataset/flight-delays.zip)
 2. Extract the contents of that file to an empty folder, so that there are at least three different *csv* files (for example `~/flights/delays/`)
 
 ### 3. Configure the Web server (optional)
